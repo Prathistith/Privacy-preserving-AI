@@ -70,7 +70,7 @@ if use_cuda:
 start_time = time.time()
 optimizer = torch.optim.Adam(cae.parameters(), lr=learning_rate)
 
-for epoch in range(0, 20):
+for epoch in range(0, 10000):
     for i, (batch_x, batch_smG, batch_opG, batch_y) in enumerate(data_loader):
         if use_cuda:
             x_var = Variable(batch_x).cuda()
